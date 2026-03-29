@@ -55,7 +55,7 @@ impl Highlighter {
         format!(
             "{}{}{}{}{}",
             before,
-            ansi::REVERSE,  // 反显高亮
+            ansi::REVERSE, // 反显高亮
             match_text,
             ansi::RESET,
             after
@@ -120,11 +120,8 @@ pub fn print_results(results: &[SearchResult], use_color: bool) -> Result<(), st
         }
 
         // 高亮匹配
-        let highlighted = highlighter.highlight_match(
-            &result.line,
-            result.start_column,
-            result.end_column,
-        );
+        let highlighted =
+            highlighter.highlight_match(&result.line, result.start_column, result.end_column);
         println!("{}", highlighted);
     }
 

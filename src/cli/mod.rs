@@ -146,5 +146,3 @@ pub enum BinaryMode {
     /// 用 <BINARY> 标记替换二进制内容
     WithPlaceholder,
 }
-
-

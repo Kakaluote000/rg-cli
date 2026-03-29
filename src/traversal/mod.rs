@@ -179,8 +179,14 @@ mod tests {
         let temp = TempDir::new().unwrap();
         let dir = temp.path();
 
-        File::create(dir.join("test.txt")).unwrap().write_all(b"hello").unwrap();
-        File::create(dir.join("test.rs")).unwrap().write_all(b"fn main()").unwrap();
+        File::create(dir.join("test.txt"))
+            .unwrap()
+            .write_all(b"hello")
+            .unwrap();
+        File::create(dir.join("test.rs"))
+            .unwrap()
+            .write_all(b"fn main()")
+            .unwrap();
 
         let traverser = Traverser::new(
             u32::MAX,
@@ -199,8 +205,14 @@ mod tests {
         let temp = TempDir::new().unwrap();
         let dir = temp.path();
 
-        File::create(dir.join("test.txt")).unwrap().write_all(b"hello").unwrap();
-        File::create(dir.join("target.txt")).unwrap().write_all(b"world").unwrap();
+        File::create(dir.join("test.txt"))
+            .unwrap()
+            .write_all(b"hello")
+            .unwrap();
+        File::create(dir.join("target.txt"))
+            .unwrap()
+            .write_all(b"world")
+            .unwrap();
 
         let traverser = Traverser::new(
             u32::MAX,

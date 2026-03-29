@@ -106,10 +106,7 @@ impl SearchEngine {
         // 并发搜索
         let results = files
             .par_iter()
-            .flat_map(|file| {
-                self.search_file(file, include_hidden)
-                    .unwrap_or_default()
-            })
+            .flat_map(|file| self.search_file(file, include_hidden).unwrap_or_default())
             .collect();
 
         Ok(results)
