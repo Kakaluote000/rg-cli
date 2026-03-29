@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "A fast, cross-platform file search tool similar to ripgrep"
 license = "MIT"
-repository = "https://github.com/yourname/rg-cli"
+repository = "https://github.com/Kakaluote000/rg-cli"
 keywords = ["cli", "search", "grep", "ripgrep"]
 categories = ["command-line-utilities"]
 
